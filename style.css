@@ -1,0 +1,259 @@
+/* Reset básico */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #000; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+
+/* Seções com altura de tela inteira */
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Parte 01 - Cor Rosa */
+.parte01 {
+    background-color: #FFB3E3;
+    color: white;
+}
+
+.parte01 h1 {
+    font-family: 'Antonio', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.parte01 p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.parte01 button {
+   padding: 10px 25px;
+    font-size: 16px;
+    background-color: #d9ff00;
+    border: 2px solid #000;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+/* Parte 02 - Cor Amarela */
+.parte02 {
+    background-color: #E1FE6B;
+    color: #333;
+}
+
+.conteudo02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.parte02 img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white; /* Opcional, borda para destaque */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+}
+
+.texto h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Parte 03 - Cor Branca */
+.parte03 {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.parte03 h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.conteudo03 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.locais {
+     text-align: left;
+}
+
+.locais p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Parte 04 - Rosa 02 */
+.parte04 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    background-color: #ffb6e6;
+    text-align: left;
+}
+
+.parte04 h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.imagem-curso img {
+    max-width: 180px;
+    height: auto;
+    display: block;
+}
+
+
+/* Parte 05 - Verde 02 */
+.parte05 {
+    background-color: #E1FE6B;
+    color: #333;
+}
+
+.conteud05 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.parte05 h5 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contato {
+ max-width: 300px;
+    text-align: left;
+}
+
+.contato h6 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Setas de navegação entre seções */
+.seta {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    animation: bounce 2s infinite;
+    text-decoration: none;
+}
+
+.parte02 .seta,
+.parte03 .seta,
+.parte05 .seta {
+    color: #333;
+}
+
+
+/* Flexbox geral */
+.conteudo02,
+.conteudo03,
+.conteudo04,
+.conteud05 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+/* Texto com largura controlada */
+.texto {
+    max-width: 500px;
+    text-align: justify;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    .conteudo02,
+    .conteudo03,
+    .conteudo04,
+    .conteud05 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto {
+        max-width: 90%;
+    }
+}
+
+/* Animação da seta */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .conteudo03,
+    .conteud05 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto,
+    .contato,
+    .locais {
+        text-align: center;
+    }
+}
