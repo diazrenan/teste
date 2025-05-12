@@ -185,12 +185,12 @@ section {
     margin-bottom: 10px;
 }
 
-.contato a img {
+.conteud05 .icone a img {
     margin-top: 10px;
     transition: transform 0.2s;
 }
 
-.contato a img:hover {
+.conteud05 .icone a img:hover {
     transform: scale(1.1);
 }
 
