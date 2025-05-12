@@ -25,7 +25,7 @@ body {
 
 /* Seções com altura de tela inteira */
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,9 +171,27 @@ section {
     text-align: left;
 }
 
+.texto {
+    margin-right: 5rem; /* ou margin-bottom se estiver em coluna no mobile */
+}
+
+.texto h5,
+.contato h6 {
+    margin-top: 0;
+}
+
 .contato h6 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+}
+
+.contato a img {
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.contato a img:hover {
+    transform: scale(1.1);
 }
 
 /* Setas de navegação entre seções */
@@ -255,5 +273,22 @@ section {
     .contato,
     .locais {
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h2, h3, h4, h5, h6 {
+        font-size: 1.5rem;
+    }
+
+    .parte01 h1 {
+        font-size: 2rem;
+    }
+
+    .parte01 p,
+    .locais p,
+    .texto,
+    .contato {
+        font-size: 1rem;
     }
 }
